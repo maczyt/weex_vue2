@@ -15,6 +15,7 @@
       <router-view></router-view>
       <ul class="pages clearfix">
         <li class="prev"><a @click="handlePrev">上一页</a></li>
+        <li>{{ page }}</li>
         <li class="next"><a @click="handleNext">下一页</a></li>
       </ul>
     </div>
@@ -137,15 +138,20 @@
     }
     .pages {
       padding: 0 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       li {
+        flex-grow: 1;
         height: 35px;
         line-height: 35px;
+        text-align: center;
       }
       .prev {
-        float: left;
+        text-align: left;
       }
       .next {
-        float: right;
+        text-align: right;
       }
     }
   }
@@ -157,19 +163,17 @@
         contents: []
       }
     },
+    computed: {
+      page () {
+        return this.$store.state.page
+      }
+    },
     methods: {
       handlePrev () {
-        var page = window.localStorage.getItem('page')
-        page = Number(page) || 1
-        if (page === 1) {
-          return
-        }
-        window.localStorage.setItem('page', page - 1)
+        this.$store.dispatch('decrement')
       },
       handleNext () {
-        var page = window.localStorage.getItem('page')
-        page = page || 1
-        window.localStorage.setItem('page', +page + 1)
+        this.$store.dispatch('increment')
       }
     }
   }

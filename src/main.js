@@ -4,6 +4,9 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
 import App from './App'
+// import MyApp from './MyApp'
+
+import store from './store'
 
 Vue.use(VueResource)
 
@@ -12,5 +15,7 @@ new Vue({
   el: '#app',
   // template: '<App/>',
   // components: { App }
-  ...App
+  ...App,
+  store
+  // ...MyApp
 })

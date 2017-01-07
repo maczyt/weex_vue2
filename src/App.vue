@@ -63,7 +63,12 @@ export default {
     MyMain,
     MyFooter
   },
-  router
+  router,
+  mounted () {
+    if (/#\/$/.test(window.location.hash)) {
+      this.$router.push('all')
+    }
+  }
 }
 </script>
 
