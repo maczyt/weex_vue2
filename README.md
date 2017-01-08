@@ -15,4 +15,9 @@ npm run dev
 npm run build
 ```
 
-![](./static/jieduan.png)
+## Question
+
+1. 如何获取 *无人回复的话题* & *积分榜*
+
+
+<img src="./static/jieduan.png" height="300">

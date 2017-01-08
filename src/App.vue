@@ -8,6 +8,7 @@
 
 <script>
 import 'normalize.css'
+import '../static/style/Common.scss'
 import MyHeader from './components/Header'
 import MyMain from './components/Main'
 import MyFooter from './components/Footer'
@@ -71,44 +72,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-  html, body {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: #e1e1e1;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    margin: 0 !important;
-  }
-  ul, li {
-    list-style: none;
-    margin: 0;
-  }
-  a {
-    cursor: pointer;
-  }
-  .clearfix {
-    &:after {
-      content: '';
-      display: block;
-      visibility: hidden;
-      clear: both;
-      height: 0;
-    }
-  }
-  .container {
-    width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    &::after {
-      content: '';
-      display: block;
-      height: 0;
-      visibility: hidden;
-      clear: both;
-    }
-  }
-</style>

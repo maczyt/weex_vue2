@@ -10,12 +10,14 @@ import store from './store'
 
 Vue.use(VueResource)
 
+// Vue.http.options.xhr = { withCredentials: true }
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   // template: '<App/>',
   // components: { App }
   ...App,
+  // ...MyApp,
   store
-  // ...MyApp
 })
